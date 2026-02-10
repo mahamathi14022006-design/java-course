@@ -1,0 +1,36 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        {
+            int A,B,C;
+            A=s.nextInt();
+            B=s.nextInt();
+            C=s.nextInt();
+            if(A>B)
+            {
+                if(A>C)
+                {
+                    System.out.println(A);
+                }
+            }
+            else if(B>C)
+            {
+              if(B>A)
+              {
+                  System.out.println(B);
+              }
+            }
+            else
+            {
+                System.out.println(C);
+            }
+        }
+    }
+}
