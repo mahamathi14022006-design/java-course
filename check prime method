@@ -1,0 +1,23 @@
+import java.io.*;
+import java.util.*;
+
+ public class Solution {
+    public void java(int n)
+    {
+       if(n%2==0)
+       {
+           System.out.println("Not Prime");
+       }
+        else
+        {
+            System.out.println("Prime");
+        }
+    }
+
+    public static void main(String[] args) {
+        Solution ob=new Solution();
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+         ob.java(n);
+    }
+}
