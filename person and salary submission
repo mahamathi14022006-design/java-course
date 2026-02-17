@@ -1,0 +1,28 @@
+import java.util.*;
+class Person{
+    void displayName(String x){
+        System.out.println("Name:"+x);
+    }
+}
+class Employee extends Person{
+    void displaySalary(double n){
+        System.out.println("Salary:"+n);
+    }
+} 
+class Salary extends Employee{
+    void show(String x,double n){
+    displayName(x);
+    displaySalary(n); 
+    }
+}
+public class main{
+    public static void main(String [] args){
+        Scanner s=new Scanner(System.in);
+        String x=s.nextLine();
+        double n=s.nextDouble();
+        Salary r=new Salary();
+       // r.roll(x);
+       // s.pass(n);
+        r.show(x,n);
+    }
+}
