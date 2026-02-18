@@ -1,0 +1,37 @@
+import java.io.*;
+import java.util.*;
+class AreaCalculator{
+    int area(int side){
+        return side*side; 
+    }
+    int area(int length,int breadth){
+        return length*breadth;
+    }
+             double area(double radius){
+                 final double PI=3.14;
+                 return PI*radius*radius; 
+             }       
+}
+             public class main{
+                 public static void main(String[] args){
+                     Scanner s=new Scanner(System.in);
+                     String shape = s.nextLine();
+
+        AreaCalculator obj = new AreaCalculator();
+
+        if (shape.equals("Square")) {
+            int side = s.nextInt();
+            System.out.println(obj.area(side));
+        }
+        else if (shape.equals("Rectangle")) {
+            int length = s.nextInt();
+            int breadth = s.nextInt();
+            System.out.println(obj.area(length, breadth));
+        }
+        else if (shape.equals("Circle")) {
+            double radius = s.nextDouble();
+            System.out.println(obj.area(radius));
+        }
+    }
+}
+                     
