@@ -1,0 +1,31 @@
+import java.io.*;
+import java.util.*;
+
+interface Calculator {
+    void add(int a, int b);
+    void sub(int a, int b);
+}
+
+class C implements Calculator {
+    public void add(int a, int b) {
+        System.out.println(a + b);
+    }
+
+    public void sub(int a, int b) {
+        System.out.println(a - b);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        C obj = new C(); 
+
+        int a = s.nextInt();
+        int b = s.nextInt();
+
+        obj.add(a, b);
+        obj.sub(a, b);
+    }
+}
