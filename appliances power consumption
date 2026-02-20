@@ -1,0 +1,41 @@
+import java.util.*;
+
+abstract class Appliance {
+    abstract int powerUsage(int hours);
+}
+
+class Fan extends Appliance {
+    int powerUsage(int hours) {
+        return hours * 50;
+    }
+}
+
+class AC extends Appliance {
+    int powerUsage(int hours) {
+        return hours * 150;
+    }
+}
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String type = sc.nextLine().trim();  
+        int hours = sc.nextInt();
+
+        Appliance app = null;
+
+        if (type.equalsIgnoreCase("Fan")) {
+            app = new Fan();
+        } 
+        else if (type.equalsIgnoreCase("AC")) {
+            app = new AC();
+        }
+
+        if (app != null) {
+            System.out.println(app.powerUsage(hours));
+        }
+
+        sc.close();
+    }
+}
