@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+class Rectangle{
+    int length;
+    int breadth;
+    Rectangle (int l,int b){
+        length=l;
+        breadth=b;
+    }
+    void displayArea(){
+        int area=length*breadth;
+        System.out.println("Area:"+area);
+    }
+}
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int l=s.nextInt();
+        int b=s.nextInt();
+        Rectangle r=new Rectangle(l,b);
+        r.displayArea();
+       // r.displayArea();
+    }
+}
