@@ -1,0 +1,43 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+class Student{
+    String name;
+    int marks;
+    Student(String n,int a){
+        name=n;
+        marks=a;
+    }
+    void displayGrade(){
+       System.out.println("Name:"+name);
+       // System.out.println("Marks"+marks);    
+    }  
+}
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        String n=s.nextLine();
+        int a=s.nextInt();
+        Student S=new Student(n,a);
+        S.displayGrade();
+        if(a>= 90){
+            System.out.println("Grade:Excellent");
+        }
+        else if(a>=75 && a<90)
+        {
+            System.out.println("Grade:Good");
+        }
+        else if(a>=50 && a<75)
+        {
+            System.out.println("Grade:Average");
+        }
+        else if(a<50)
+        {
+            System.out.println("Grade:Fail");
+        }
+       // S.displayGrade();
+    }
+}
